@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<!--  DO NOT TRANSLATE -->
+	<string name="location_service_period"> locationServicePeriod </string>
+	<string name="app_name">TruckStop</string>
+
+	<!-- Text for questions -->
+	<string name="r0_label">
+        Entry Type:
+    </string>
+
+	<string name="r1_label">
+		License plate of the truck:
+	</string>
+
+	<string name="r2_label">
+        Identify closest intersection or address:
+    </string>
+
+    <string name="r3_label">
+        Stopped Status:
+    </string>
+
+    <string name="r4_label">
+        Violations:
+    </string>
+
+    <string name="i0_label">
+        Take a picture of the truck.
+    </string>
+
+
+	<!-- Text for Buttons -->
+	<string name="stopTrace"> Stop trace </string>
+	<string name="startTrace"> Start trace </string>
+	<string name="map"> Map a Truck </string>
+	<string name="map_es"> Mapa de tu trabajo </string>
+
+	<!-- Default Parameters  -->
+	<string name="otherResponse"> Other </string>
+	<string name="defaultResponse"> Click Here </string>
+	<string name="done"> Done </string>
+	<string name="versionString"> "Version: " </string>
+
+
+	<string name="about_content">TruckStop is a participatory sensing campaign geared
+		towards documenting the impact of heavy-duty trucks (HDTs) in Boyle Heights.
+		With this Android application you can tag the location and description of
+		idling or parked trucks in your community and assist researchers in data
+		collection!</string>
+
+	<string name="instructions_content">Press \"Menu\" and select \"Survey\" to be taken to
+		the survey form. Answer the questions on that page and snap a picture
+		of the truck to help us better keep track of all the trucks that
+		have been mapped. Once you are finished click \"Done\". Return later to check
+		if the truck is still there and upload a returning survey if it is.</string>
+
+    <string name="further_content">\tIf you took a survey about an IDLING truck: set your alarm for
+        for 6 minutes from now, making the title the license plate of the truck that you just tagged.
+        After six minutes, return to the spot where you saw the truck and fill out a follow-up survey.
+        \n\n\tIf you took a survey about a STOPPED truck: set your alarm for
+        for 72 hours (3 days) from now, making the title the license plate of the truck that you just tagged.
+        After three days, return to the spot where you saw the truck and fill out a follow-up survey.
+        </string>
+
+     <string name = "thanks">Thank you!</string>
+
+     <!--  Used to access extras in intents -->
+    <string name="extraLatitude">latitude</string>
+    <string name="extraLongitude">longitude</string>
+
+    <!--  Duration between requests to location device. If we make this longer, than we
+        conserve power, if using GPS, because we make fewer requests to the location
+                provider. However, location will also be less accurate. -->
+    <string name="locationRequestPeriod"> 600000 </string>
+
+    <!--  Periodicity and duration for requesting location stamps for the path trace -->
+    <string name="pathRequestPeriod"> 30000 </string>
+    <string name="pathRequestDuration"> 180000 </string>
+
+	<!--  Configuration information -->
+	<string name="baseurl">http://bhtruckstop.appspot.com/</string>
+	<string name="loginurl">http://bhtruckstop.appspot.com/_ah/login</string>
+	<string name="surveyuploadurltag">"protected_upload_work"</string>
+	<string name="register_user">"http://bhtruckstop.appspot.com/confirm_user"</string>
+	<string name="version">1</string>
+	<string name="preferences">edu.ucla.cens.bhwork.preferences</string>
+	<string name="databasename">@string/app_name</string>
+
+
+</resources>

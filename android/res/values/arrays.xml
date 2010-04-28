@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string-array name="r0">
+        <item> New  </item>
+        <item> Returning </item>
+    </string-array>
+
+    <string-array name="r1">
+    </string-array>
+
+    <string-array name="r2">
+    </string-array>
+
+	<string-array name="r3">
+		<item> Parked </item>
+		<item> Idling </item>
+	</string-array>
+
+	<string-array name="r4">
+    	<item> Residential Street </item>
+		<item> Unattached Semi-trailer </item>
+		<item> Blocking Street </item>
+		<item> All </item>
+		<item> None </item>
+	</string-array>
+
+</resources>

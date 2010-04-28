@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scroll_view" android:layout_height="fill_parent"
+    android:layout_width="fill_parent" android:background="@drawable/background">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent" android:layout_height="fill_parent"
+        android:background="@drawable/background">
+
+        <TextView android:id="@+id/logo" android:layout_width="fill_parent"
+            android:layout_height="125sp" android:textStyle="bold"
+            android:textSize="35sp" android:textColor="@drawable/textcolor"
+            android:gravity="center" android:text="@string/app_name" />
+
+        <Button android:id="@+id/start_survey_en"
+            android:layout_centerHorizontal="true"
+            android:layout_width="300sp" android:layout_height="80sp"
+            android:layout_below="@id/logo" android:textStyle="bold"
+            android:textSize="25sp" android:text="@string/map" />
+
+        <Button android:id="@+id/about"
+            android:layout_width="150sp" android:layout_height="80sp"
+            android:textStyle="bold"
+            android:layout_below="@id/start_survey_en"
+            android:paddingRight="10sp"
+            android:layout_alignLeft="@id/start_survey_en"
+            android:textSize="18sp" android:text="About" />
+
+        <Button android:id="@+id/instructions"
+            android:layout_width="150sp" android:layout_height="80sp"
+            android:textStyle="bold"
+            android:layout_below="@id/start_survey_en"
+            android:layout_toRightOf="@id/about"
+            android:textSize="18sp" android:text="Instructions" />
+
+        <ToggleButton android:id="@+id/path"
+            android:layout_below="@id/about"
+            android:layout_centerHorizontal="true"
+            android:layout_width="135sp" android:layout_height="110sp"
+            android:textStyle="bold" android:textSize="20sp" android:visibility="invisible"/>
+
+    </RelativeLayout>
+</ScrollView>
