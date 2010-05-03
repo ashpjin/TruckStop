@@ -1,0 +1,46 @@
+{% extends "template.html" %}
+
+{% block title %}Data{% endblock %}
+
+{% block content %}
+   <div class="span-24 last">
+      <table>
+         <thead>
+            <tr>
+               <th class="span-2">Date/Time</th>
+               <th class="span-2">User</th>
+               <th class="span-2">License Plate</th>
+               <th class="span-2">Latitude</th>
+               <th class="span-2">Longitude</th>
+               <th class="span-4">Street Addr</th>
+               <th class="span-2">Survey Type</th>
+               <th class="span-2">Status</th>
+               <th class="span-3">Violations</th>
+               <th class="span-3">Image</th>
+            </tr>
+         </thead>
+         <tbody>
+            {% for s in surveys %}
+               <tr>
+                  <td class="span-2">{{s.timestamp}}</td>
+                  <td class="span-2">{{s.username}}</td>
+                  <td class="span-2">{{s.r_0}}</td>
+                  <td class="span-2">{{s.latitude}}</td>
+                  <td class="span-2">{{s.longitude}}</td>
+                  <td class="span-4">{{s.r_1}}</td>
+                  <th class="span-2">{{s.r_2}}</th>
+                  <th class="span-2">{{s.r_3}}</th>
+                  <th class="span-3">{{s.r_4}}</th>
+                  <td class="span-3">
+                  {% if s.i_0 %}
+                  <img src="http://bhtruckstop.appspot.com/getimageData?key={{s.key}}" width="180" height="130">
+                  {% else %}
+                  (no photo.)
+                  {% endif %}
+                  </td>
+            </tr>
+            {% endfor %}
+            </tbody>
+         </table>
+      </div>
+{% endblock%}

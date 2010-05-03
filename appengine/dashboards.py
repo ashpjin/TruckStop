@@ -108,33 +108,21 @@ class GetImageData(webapp.RequestHandler):
         # We directly return the jpeg data
         self.response.headers['Content-type'] = 'image/jpeg'
         req_key = self.request.get('key')
-        pic = self.request.get('i')
-        appname = self.request.get('appname')
-        if req_key != '' and appname != '' and pic != '':
+        if req_key != '':
             try :
                 db_key = db.Key(req_key)
 
-                pickimage = {
-                    "BHCasa": "SELECT * FROM HomeImages WHERE survey_ref = :1",
-                    "BHRuta": "SELECT * FROM PathImages WHERE survey_ref = :1",
-                    "BHEscuela": "SELECT * FROM SchoolImages WHERE survey_ref = :1",
-                    "BHTrabajo": "SELECT * FROM WorkImages WHERE survey_ref = :1",
-                    "BHVecindario": "SELECT * FROM AfterImages WHERE survey_ref = :1"
-                    }
-                
-                db_name = ""
-                try:
-                    db_name = pickimage[appname]
-                except KeyError:
-                    logging.error('Could not find app %s' % (appname))
+                db_query = "SELECT * FROM TruckImages WHERE survey_ref = :1"
+
+                pi = db.GqlQuery(db_query, db_key).get()
+                if not pi:
+                    logging.error('no image found for key: ' + req_key)
                     self.error(401)
                     return
+                    
+                self.response.out.write(pi.image)
+                return
                 
-                pi = db.GqlQuery(db_name, db_key).fetch(20)
-                for res in pi:
-                    if res.image_index == pic:
-                        self.response.out.write(res.image)
-                        return
             except (db.Error):
                 self.error(401)
                 return
@@ -225,12 +213,12 @@ class DashboardData(webapp.RequestHandler):
     # A mock up dashboard page
     def get(self):
 
-        if not users.is_current_user_admin():
+        """if not users.is_current_user_admin():
             self.response.out.write(
                 "Admin Only Access... you need to <a href=" +
-                users.create_login_url("http://bh-survey.appspot.com/dashboard") +
+                users.create_login_url("http://bhtruckst.appspot.com/dashboard") +
                 ">login</a>")
-            return
+            return """
         
         if os.environ.get('HTTP_HOST'):
             base_url = 'http://' + os.environ['HTTP_HOST'] + '/'
@@ -255,7 +243,7 @@ class DashboardData(webapp.RequestHandler):
         template_values['nextpage'] = page + 1
         
 
-        appname = self.request.get('appname')
+        appname = "TruckStop" #self.request.get('appname')
         
         picksurvey = {
             "TruckStop": lambda: TruckSurvey.all().order('-timefull')  #EDIT
@@ -272,20 +260,23 @@ class DashboardData(webapp.RequestHandler):
 
         template_values['appname'] = appname
 
-	survey_data = survey_query.fetch(PAGE_SIZE, offset=PAGE_SIZE*(page-1))
+        survey_data = survey_query.fetch(PAGE_SIZE, offset=PAGE_SIZE*(page-1))
 
         for s in survey_data:
-            s.timestamp = s.timestamp.replace(tzinfo=UTC_tzinfo()).astimezone(Pacific_tzinfo())
-            if s.timefull is not None:
-                s.timefull = s.timefull.replace(tzinfo=UTC_tzinfo()).astimezone(Pacific_tzinfo())
+            #s.timestamp = s.timestamp.replace(tzinfo=UTC_tzinfo()).astimezone(Pacific_tzinfo())
+            #if s.timefull is not None:
+              #  s.timefull = s.timefull.replace(tzinfo=UTC_tzinfo()).astimezone(Pacific_tzinfo())
             s.time = int(datetime_module.datetime.fromtimestamp(s.time/1000.0).strftime("%Y%m%d%H%M%S"))
+            s.key = str(s.key())
 
             #s.timefull = s.timefull.astimezone(Pacific_tzinfo())
 
-        template_values['survey'] = survey_data
+        template_values['surveys'] = survey_data
+
+        logging.debug(str(template_values['surveys']))
 
         picktemplate = {
-            "TruckStop": 'views/dashboard.html' #EDIT
+            "TruckStop": 'views/data.html' #EDIT
             }
         
         path = os.path.join (os.path.dirname(__file__), picktemplate[appname])
