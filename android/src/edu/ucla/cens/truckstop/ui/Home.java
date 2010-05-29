@@ -14,6 +14,7 @@ import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.util.DisplayMetrics;
 import android.util.Log;
+import android.view.Menu;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.content.Intent;
@@ -29,6 +30,8 @@ import edu.ucla.cens.truckstop.services.LightLocation;
 import edu.ucla.cens.truckstop.services.RecordPath;
 import edu.ucla.cens.truckstop.content.CreateQuestions;
 import edu.ucla.cens.truckstop.utils.SurveyDB;
+import edu.ucla.cens.truckstop.utils.BHLanguage;
+import edu.ucla.cens.truckstop.utils.PreferencesMgr;
 
 public class Home extends Activity {
     private static final String TAG = "Home";
@@ -54,6 +57,15 @@ public class Home extends Activity {
     private static final String SPANISH = "es";
     private String language;
     private Button translate;
+
+    @Override
+    public boolean onCreateOptionsMenu (Menu m) {
+        super.onCreateOptionsMenu (m);
+
+        m.add (Menu.NONE, 0, Menu.NONE, "About").setIcon (android.R.drawable.ic_menu_info_details);
+        m.add (Menu.NONE, 1, Menu.NONE, "Instructions").setIcon (android.R.drawable.ic_menu_help);
+        return true;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -99,14 +111,14 @@ public class Home extends Activity {
         Button button_en = (Button) findViewById(R.id.start_survey_en);
         button_en.setOnClickListener(mEnglishListener);
 
-        Button button_about = (Button) findViewById(R.id.about);
+        /*Button button_about = (Button) findViewById(R.id.about);
         button_about.setOnClickListener(mAboutListener);
 
         Button button_instr = (Button) findViewById(R.id.instructions);
-        button_instr.setOnClickListener(mInstructionsListener);
+        button_instr.setOnClickListener(mInstructionsListener);*/
 
-       // Button button_es = (Button) findViewById(R.id.start_survey_es);
-       // button_es.setOnClickListener(mSpanishListener);
+        Button button_es = (Button) findViewById(R.id.start_survey_es);
+        button_es.setOnClickListener(mSpanishListener);
 
         // Open database so that it creates the tables. Should only have to do this for one
         //  survey. This should force SurveyDB to initialize the path variables to the database.
@@ -150,14 +162,15 @@ public class Home extends Activity {
 
     View.OnClickListener mEnglishListener = new View.OnClickListener () {
         public void onClick(View v) {
-            setLanguage(ENGLISH);
+            setLanguage(BHLanguage.ENGLISH);
             startSurvey();
         }
     };
 
     View.OnClickListener mSpanishListener = new View.OnClickListener () {
         public void onClick(View v) {
-            setLanguage(SPANISH);
+            Log.d(TAG, "in Spanish Listener");
+            setLanguage(BHLanguage.SPANISH);
             startSurvey();
         }
     };
@@ -209,14 +222,8 @@ public class Home extends Activity {
     }
 
     private void setLanguage(String language) {
-        preferences.edit().putString(PREFS_LANGUAGE, language).commit();
-
-        // Set the locale
-        Resources res = getResources();
-        DisplayMetrics dm = res.getDisplayMetrics();
-        Configuration conf = res.getConfiguration();
-        conf.locale = new Locale(language);
-        res.updateConfiguration(conf, dm);
+        Log.d(TAG, "Setting language to: " + language);
+        BHLanguage.setLanguage(this, language);
 
         // Update the text for all of the buttons in this view
         if (RECORD_PATH) setPathButton(this.pathServiceRunning);

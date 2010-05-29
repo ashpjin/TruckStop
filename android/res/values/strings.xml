@@ -7,7 +7,7 @@
 
 	<!-- Text for questions -->
 	<string name="r0_label">
-        Entry Type:
+        Entry Type: (Returning = update about a truck that has already been logged)
     </string>
 
 	<string name="r1_label">
@@ -35,7 +35,7 @@
 	<string name="stopTrace"> Stop trace </string>
 	<string name="startTrace"> Start trace </string>
 	<string name="map"> Map a Truck </string>
-	<string name="map_es"> Mapa de tu trabajo </string>
+	<string name="map_es"> Describa la camión </string>
 
 	<!-- Default Parameters  -->
 	<string name="otherResponse"> Other </string>
@@ -64,7 +64,7 @@
         After three days, return to the spot where you saw the truck and fill out a follow-up survey.
         </string>
 
-     <string name = "thanks">Thank you!</string>
+     <string name = "thanks"> ¡Gracias! </string>
 
      <!--  Used to access extras in intents -->
     <string name="extraLatitude">latitude</string>

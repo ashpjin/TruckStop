@@ -14,11 +14,6 @@ public final class R {
         public static final int r2=0x7f040002;
         public static final int r3=0x7f040003;
         public static final int r4=0x7f040004;
-        public static final int r5=0x7f040005;
-        public static final int r6=0x7f040006;
-        public static final int r7=0x7f040007;
-        public static final int r8=0x7f040008;
-        public static final int r9=0x7f040009;
     }
     public static final class attr {
     }
@@ -50,46 +45,45 @@ public final class R {
         public static final int white=0x7f020011;
     }
     public static final class id {
-        public static final int about=0x7f060014;
         public static final int cb_clear_user=0x7f06000d;
         public static final int cb_new_account=0x7f06000e;
         public static final int email=0x7f06000a;
-        public static final int entry_photo_overlay=0x7f06001b;
+        public static final int entry_photo_overlay=0x7f06001a;
         public static final int further_instr=0x7f060010;
         public static final int home_button=0x7f060012;
-        public static final int i0_label=0x7f060019;
-        public static final int i0_picture=0x7f06001a;
-        public static final int i0_thumbnail=0x7f06001c;
-        public static final int instructions=0x7f060015;
+        public static final int i0_label=0x7f060018;
+        public static final int i0_picture=0x7f060019;
+        public static final int i0_thumbnail=0x7f06001b;
         public static final int login=0x7f06000c;
         public static final int logo=0x7f060001;
         public static final int pass2_label=0x7f060007;
         public static final int password=0x7f060006;
         public static final int password2=0x7f060008;
-        public static final int path=0x7f060016;
-        public static final int r0=0x7f06001e;
-        public static final int r0_label=0x7f06001d;
-        public static final int r1_edit=0x7f060020;
-        public static final int r1_label=0x7f06001f;
-        public static final int r2_edit=0x7f060022;
-        public static final int r2_label=0x7f060021;
-        public static final int r3=0x7f060024;
-        public static final int r3_edit=0x7f060025;
-        public static final int r3_label=0x7f060023;
-        public static final int r4=0x7f060027;
-        public static final int r4_edit=0x7f060028;
-        public static final int r4_label=0x7f060026;
+        public static final int path=0x7f060015;
+        public static final int r0=0x7f06001d;
+        public static final int r0_label=0x7f06001c;
+        public static final int r1_edit=0x7f06001f;
+        public static final int r1_label=0x7f06001e;
+        public static final int r2_edit=0x7f060021;
+        public static final int r2_label=0x7f060020;
+        public static final int r3=0x7f060023;
+        public static final int r3_edit=0x7f060024;
+        public static final int r3_label=0x7f060022;
+        public static final int r4=0x7f060026;
+        public static final int r4_edit=0x7f060027;
+        public static final int r4_label=0x7f060025;
         public static final int save_login=0x7f06000b;
         public static final int scroll_view=0x7f060000;
         public static final int start_survey=0x7f060002;
         public static final int start_survey_en=0x7f060013;
-        public static final int submit_row=0x7f060029;
-        public static final int surface=0x7f060017;
+        public static final int start_survey_es=0x7f060014;
+        public static final int submit_row=0x7f060028;
+        public static final int surface=0x7f060016;
         public static final int thanks=0x7f060011;
-        public static final int title=0x7f060018;
+        public static final int title=0x7f060017;
         public static final int tv1=0x7f060009;
         public static final int tv2=0x7f060005;
-        public static final int upload_button=0x7f06002a;
+        public static final int upload_button=0x7f060029;
         public static final int user_input=0x7f060004;
         public static final int user_label=0x7f060003;
         public static final int version=0x7f06000f;
@@ -106,6 +100,8 @@ public final class R {
     }
     public static final class string {
         public static final int about_content=0x7f050010;
+        /**  Text for questions 
+         */
         public static final int app_name=0x7f050001;
         /**   Configuration information 
          */
@@ -119,11 +115,6 @@ public final class R {
         public static final int extraLongitude=0x7f050015;
         public static final int further_content=0x7f050012;
         public static final int i0_label=0x7f050007;
-        public static final int i1_label=0x7f050025;
-        public static final int i2_label=0x7f050026;
-        public static final int i3_label=0x7f050027;
-        public static final int i4_label=0x7f050028;
-        public static final int i5_label=0x7f050029;
         public static final int instructions_content=0x7f050011;
         /**   Duration between requests to location device. If we make this longer, than we
         conserve power, if using GPS, because we make fewer requests to the location
@@ -153,15 +144,9 @@ public final class R {
         public static final int r2_label=0x7f050004;
         public static final int r3_label=0x7f050005;
         public static final int r4_label=0x7f050006;
-        public static final int r5_label=0x7f050020;
-        public static final int r6_label=0x7f050021;
-        public static final int r7_label=0x7f050022;
-        public static final int r8_label=0x7f050023;
-        public static final int r9_label=0x7f050024;
         public static final int register_user=0x7f05001c;
         public static final int startTrace=0x7f050009;
         /**  Text for Buttons 
- Text for Buttons 
          */
         public static final int stopTrace=0x7f050008;
         public static final int surveyuploadurltag=0x7f05001b;

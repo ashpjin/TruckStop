@@ -2,67 +2,40 @@
 <resources>
 
 	<!-- Text for questions -->
-	<string name="r0_label">
-		Qué tipo de trabajo haces? Explique:
-	</string>
-	<string name="r1_label">
-		Identify 3 things that concern you about your work.
-	</string>
+	<string name="app_name">TruckStop</string>
 
+    <!-- Text for questions -->
+    <string name="r0_label">
+        Tipo de entrada: (Regresar = actualización de una camión que ya fue describida)
+    </string>
 
-	<string name="r2_label">
-		Label type of concern
-	</string>
-	<string name="r3_label">
-		Rate level of concern (1-3)
-	</string>
+    <string name="r1_label">
+        Matrícula de la camión:
+    </string>
 
+    <string name="r2_label">
+        Identifique la intersección o dirección más cercana:
+    </string>
 
-	<string name="r4_label">
-		Label type of concern
-	</string>
-	<string name="r5_label">
-		Rate level of concern (1-3)
-	</string>
+    <string name="r3_label">
+        Estatus de parada:
+    </string>
 
-	<string name="r6_label">
-		Label type of concern
-	</string>
-	<string name="r7_label">
-		Rate level of concern (1-3)
-	</string>
+    <string name="r4_label">
+        Violaciones legales:
+    </string>
 
-	<string name="r8_label">
-		Identify the thing you enjoy most about your work
-	</string>
-	<string name="r9_label">
-		Rate level of enjoyment (1-3)
-	</string>
+    <string name="i0_label">
+        Saque una foto de la camión.
+    </string>
 
-	<string name="i0_label">
-		Concern 1: Optionally take a picture
-	</string>
-	<string name="i1_label">
-		Concern 2: Optionally take a picture.
-	</string>
-	<string name="i2_label">
-		Concern 3: Optionally take a picture.
-	</string>
-	<string name="i3_label">
-	</string>
-	<string name="i4_label">
-	</string>
-	<string name="i5_label"> </string>
+    <!-- Default Parameters  -->
+    <string name="otherResponse"> Otro </string>
+    <string name="defaultResponse"> Haga el clic aquí </string>
+    <string name="done"> Terminado </string>
+    <string name="versionString"> "Version: " </string>
 
-	<!-- Text for Buttons -->
-	<string name="stopTrace"> Stop trace </string>
-	<string name="startTrace"> Start trace </string>
-
-	<!-- Default Parameters  -->
-	<string name="otherResponse"> Other </string>
-	<string name="defaultResponse"> Click Here </string>
-
-	<string name="about_content">"@string/app_name" is a participatory sensing campaign geared
+	<string name="about_content">TruckStop is a participatory sensing campaign geared
 		towards identifying, describing and mapping community housing
 		conditions in Boyle Heights. With this Android application you can
 		describe your home and assist in a community data collection effort.

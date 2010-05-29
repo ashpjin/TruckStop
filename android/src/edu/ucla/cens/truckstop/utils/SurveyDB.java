@@ -21,7 +21,7 @@ import edu.ucla.cens.truckstop.R;
 public class SurveyDB {
 
 	public static final String KEY_ROWID = "_id";
-	public static final int DATABASE_VERSION = 5;
+	public static final int DATABASE_VERSION = 6;
 
 	// Stores the database keys used to create and access this database
 	private List<String> DBKeys;

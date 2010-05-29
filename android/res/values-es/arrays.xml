@@ -2,68 +2,28 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <string-array name="r0">
+        <item> Nuevo </item>
+        <item> Regresar </item>
     </string-array>
 
     <string-array name="r1">
     </string-array>
 
     <string-array name="r2">
-        <item> Seguridad </item>
-		<item> Salud </item>
-		<item> Estrés </item>
-		<item> Pagar </item>
-		<item> Todo </item>
-		<item> Ninguno </item>
     </string-array>
 
-	<string-array name="r3">
-		<item> 1 </item>
-		<item> 2 </item>
-		<item> 3 </item>
-	</string-array>
+    <string-array name="r3">
+        <item> Estacionado </item>
+        <item> Ralentí </item>
+    </string-array>
 
-	<string-array name="r4">
-        <item> Seguridad </item>
-		<item> Salud </item>
-		<item> Estr�s </item>
-		<item> Pagar </item>
-		<item> Todo </item>
-		<item> Ninguno </item>
-	</string-array>
+    <string-array name="r4">
+        <item> Calle Residencial </item>
+        <item> Unattached Semi-remolque </item>
+        <item> El bloqueo de la calle </item>
+        <item> Todos </item>
+        <item> Nada </item>
+    </string-array>
 
-	<string-array name="r5">
-		<item> 1 </item>
-		<item> 2 </item>
-		<item> 3 </item>
-	</string-array>
-
-	<string-array name="r6">
-        <item> Seguridad </item>
-		<item> Salud </item>
-		<item> Estr�s </item>
-		<item> Pagar </item>
-		<item> Todo </item>
-		<item> Ninguno </item>
-	</string-array>
-
-	<string-array name="r7">
-		<item> 1 </item>
-		<item> 2 </item>
-		<item> 3 </item>
-	</string-array>
-
-	<string-array name="r8">
-    	<item> Interesting work </item>
-		<item> Helpful to people </item>
-		<item> Co-workers </item>
-		<item> Flexibility </item>
-		<item> All </item>
-		<item> None </item>
-	</string-array>
-
-	<string-array name="r9">
-		<item> 1 </item>
-		<item> 2 </item>
-		<item> 3 </item>
-	</string-array>
 </resources>
+

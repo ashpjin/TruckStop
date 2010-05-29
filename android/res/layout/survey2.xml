@@ -92,9 +92,6 @@
             </RelativeLayout>
         </TableRow>
 
-		<View android:layout_height="15sp" android:background="@drawable/background" />
-		<View android:layout_height="10sp" android:background="@drawable/babyblue" />
-
 		<TableRow>
             <RelativeLayout>
                 <TextView android:id="@+id/r3_label" android:layout_width="315sp"
@@ -134,7 +131,7 @@
 				<Button android:id="@+id/upload_button"
 					android:layout_width="fill_parent"
 					android:layout_height="wrap_content"
-					android:text="Done" />
+					android:text="@string/done"/>
 			</RelativeLayout>
 		</TableRow>
 

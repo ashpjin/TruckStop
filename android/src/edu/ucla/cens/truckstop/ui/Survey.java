@@ -174,7 +174,10 @@
         @Override
         public boolean onCreateOptionsMenu (Menu m) {
             super.onCreateOptionsMenu (m);
+
             m.add (Menu.NONE, 0, Menu.NONE, "Home").setIcon (android.R.drawable.ic_menu_revert);
+            m.add (Menu.NONE, 1, Menu.NONE, "About").setIcon (android.R.drawable.ic_menu_info_details);
+            m.add (Menu.NONE, 2, Menu.NONE, "Instructions").setIcon (android.R.drawable.ic_menu_help);
             return true;
         }
 
